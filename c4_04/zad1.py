@@ -18,12 +18,12 @@ ax.plot(dane['Miesiąc'][:split + 1], dane['SmartTV'][:split + 1], color='lightg
 ax.plot(dane['Miesiąc'][:split + 1], dane['TV'][:split + 1], color='lightgray', linestyle='-')
 
 # darkblue lines
-ax.plot(dane['Miesiąc'][split:], dane['SmartTV'][split:], color='darkblue', linestyle='-')
-ax.plot(dane['Miesiąc'][split:], dane['TV'][split:], color='darkblue', linestyle='-')
+ax.plot(dane['Miesiąc'][split:], dane['SmartTV'][split:], color='navy', linestyle='-')
+ax.plot(dane['Miesiąc'][split:], dane['TV'][split:], color='navy', linestyle='-')
 
 # prawo domykania: wyzaczenie punktow na koncu linii
-ax.scatter(dane['Miesiąc'].iloc[-1], dane['SmartTV'].iloc[-1], color='darkblue')
-ax.scatter(dane['Miesiąc'].iloc[-1], dane['TV'].iloc[-1], color='darkblue')
+ax.scatter(dane['Miesiąc'].iloc[-1], dane['SmartTV'].iloc[-1], color='navy')
+ax.scatter(dane['Miesiąc'].iloc[-1], dane['TV'].iloc[-1], color='navy')
 
 # FactorInk: usuniecie zbedych krawędzi i siatek
 titlesize = 14
@@ -33,8 +33,8 @@ ax.spines['right'].set_visible(False)
 ax.yaxis.set_ticks_position('none') 
 
 #Prawo kontynuacji: uzytkownik nie musi przenosic wzroku, by odczytac o czym informuja go dane
-ax.text(len(dane) - 1, dane['SmartTV'].iloc[-1] + 5, 'SmartTV', color='darkblue', fontsize=12)
-ax.text(len(dane) - 1, dane['TV'].iloc[-1] + 5, 'TV', color='darkblue', fontsize=12)
+ax.text(len(dane) - 1, dane['SmartTV'].iloc[-1] + 5, 'SmartTV', color='navy', fontsize=12)
+ax.text(len(dane) - 1, dane['TV'].iloc[-1] + 5, 'TV', color='navy', fontsize=12)
 
 plt.title("Sprzedaż telewizorów w 2016", fontsize=titlesize)
 ax.set_xticks(range(len(dane)))
